@@ -115,7 +115,7 @@ function! neomake#makers#ft#python#flake8() abort
     let maker = {
         \ 'args': ['--format=default'],
         \ 'errorformat':
-            \ '%A%f:%l:%c: %t%n %m,' .
+            \ '%A%f:%l:%c: %t%.%#%n %m,' .
             \ '%A%f:%l: %t%n %m,' .
             \ '%-G%.%#',
         \ 'postprocess': function('neomake#makers#ft#python#Flake8EntryProcess'),
